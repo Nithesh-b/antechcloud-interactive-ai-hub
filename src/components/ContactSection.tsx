@@ -16,22 +16,50 @@ const ContactSection = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [webhookUrl, setWebhookUrl] = useState(''); // Store the Google Sheets webhook URL
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleWebhookChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setWebhookUrl(e.target.value);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!webhookUrl) {
+      toast({
+        title: "Missing webhook URL",
+        description: "Please enter your Google Sheets webhook URL first",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Send the form data to the Google Sheets webhook
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        mode: 'no-cors', // Required for Google Sheets webhooks
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      // Since we're using no-cors, we can't check response status
+      // Instead, we'll assume it worked and show a success message
       toast({
         title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
+        description: "Your message has been submitted successfully.",
       });
+      
+      // Reset the form
       setFormData({
         name: '',
         email: '',
@@ -39,8 +67,16 @@ const ContactSection = () => {
         subject: '',
         message: ''
       });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -99,6 +135,24 @@ const ContactSection = () => {
             <div className="bg-white rounded-xl shadow-md p-8">
               <h3 className="text-2xl font-bold mb-6 text-ant-darkblue">Send us a Message</h3>
               <form onSubmit={handleSubmit}>
+                <div className="mb-4">
+                  <label htmlFor="webhookUrl" className="block text-sm font-medium text-gray-700 mb-1">
+                    Google Sheets Webhook URL
+                  </label>
+                  <Input
+                    id="webhookUrl"
+                    name="webhookUrl"
+                    value={webhookUrl}
+                    onChange={handleWebhookChange}
+                    required
+                    placeholder="Paste your Google Sheets webhook URL here"
+                    className="w-full"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">
+                    Create a webhook in Google Sheets using Apps Script to receive this form data
+                  </p>
+                </div>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">

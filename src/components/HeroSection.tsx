@@ -47,17 +47,6 @@ const HeroSection = () => {
               artificial intelligence solutions, and enterprise-grade software development. Our 
               specialized AI agents deliver tailored solutions for diverse industries.
             </p>
-            
-            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-              <Button className="bg-ant-purple hover:bg-ant-purple/90 text-white px-8 py-6">
-                <Link to="/contact" className="flex items-center">
-                  Get Started <ChevronRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" className="bg-transparent border-ant-purple text-ant-purple hover:text-ant-purple/90 hover:bg-ant-purple/5 px-8 py-6">
-                <Link to="/services">Our Services</Link>
-              </Button>
-            </div>
           </div>
           
           <div className="hidden lg:block relative">
