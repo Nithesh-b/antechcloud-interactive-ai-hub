@@ -1,5 +1,4 @@
 
-import { Linkedin, Mail } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -12,7 +11,6 @@ const TeamSection = ({ limit = 0 }) => {
       position: "Founder",
       bio: "Nithesh is the visionary founder of AN Technologies, bringing extensive experience in cloud architecture and AI solutions.",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80",
-      linkedin: "https://www.linkedin.com/in/nithesh-balakrishnan-8a080461/"
     },
     {
       id: 2,
@@ -20,23 +18,20 @@ const TeamSection = ({ limit = 0 }) => {
       position: "Software Developer",
       bio: "Prashanth is a skilled software developer specializing in full-stack development and cloud-native applications.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80",
-      linkedin: "https://www.linkedin.com/in/gunda-laxmiprashanthreddy-504105261/"
     },
     {
       id: 3,
-      name: "Ansiya V A",
-      position: "Data Science Engineer",
-      bio: "Ansiya leads the data science initiatives, developing machine learning models and AI algorithms for our clients.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80",
-      linkedin: "https://www.linkedin.com/in/ansiya-v-a-80a801279/"
-    },
-    {
-      id: 4,
       name: "Santhosh Chavan",
       position: "Consultant Architect",
       bio: "Santhosh brings his expertise as a consultant architect, designing scalable and secure technology solutions.",
       image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80",
-      linkedin: "https://www.linkedin.com/in/santhosh-chavan/"
+    },
+    {
+      id: 4,
+      name: "Ansiya V A",
+      position: "Data Science Engineer",
+      bio: "Ansiya leads the data science initiatives, developing machine learning models and AI algorithms for our clients.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80",
     },
     {
       id: 5,
@@ -44,7 +39,6 @@ const TeamSection = ({ limit = 0 }) => {
       position: "IT Infrastructure Expert",
       bio: "Abhishek specializes in IT infrastructure and serves as a senior developer for complex enterprise projects.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80",
-      linkedin: "https://www.linkedin.com/in/abhishek-b-b96ba421a/"
     }
   ];
 
@@ -76,24 +70,6 @@ const TeamSection = ({ limit = 0 }) => {
                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
                 <p className="text-ant-purple font-medium mb-3">{member.position}</p>
                 <p className="text-gray-600 mb-4">{member.bio}</p>
-                <div className="flex items-center space-x-3">
-                  <a 
-                    href={member.linkedin} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-ant-blue hover:text-ant-purple transition-colors"
-                    aria-label={`${member.name}'s LinkedIn profile`}
-                  >
-                    <Linkedin className="h-5 w-5" />
-                  </a>
-                  <a 
-                    href={`mailto:${member.name.toLowerCase().replace(' ', '.')}@antechcloud.in`} 
-                    className="text-ant-blue hover:text-ant-purple transition-colors"
-                    aria-label={`Email ${member.name}`}
-                  >
-                    <Mail className="h-5 w-5" />
-                  </a>
-                </div>
               </CardContent>
             </Card>
           ))}

@@ -33,7 +33,7 @@ const AIAgentsSection = () => {
       icon: <Car className="h-12 w-12 text-ant-teal" />,
       description: "AI agent to help you choose your next car",
       features: ["Personalized car recommendations", "Feature comparisons", "Price analysis"],
-      link: "#",
+      link: "",
       color: "bg-gradient-to-br from-ant-teal/20 to-ant-teal/5"
     },
     {
@@ -42,7 +42,7 @@ const AIAgentsSection = () => {
       icon: <MessageSquare className="h-12 w-12 text-green-600" />,
       description: "Custom workflow AI automation for small businesses",
       features: ["WhatsApp integration", "Instagram chat integration", "Automated customer service"],
-      link: "#",
+      link: "",
       color: "bg-gradient-to-br from-green-500/20 to-green-500/5"
     }
   ];
@@ -97,14 +97,16 @@ const AIAgentsSection = () => {
                           </li>
                         ))}
                       </ul>
-                      <a 
-                        href={agent.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-ant-purple font-medium hover:underline mt-auto inline-flex items-center"
-                      >
-                        View Demo <ArrowRight className="ml-1 h-4 w-4" />
-                      </a>
+                      {agent.link && (
+                        <a 
+                          href={agent.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-ant-purple font-medium hover:underline mt-auto inline-flex items-center"
+                        >
+                          View Demo <ArrowRight className="ml-1 h-4 w-4" />
+                        </a>
+                      )}
                     </div>
                   </CardContent>
                 </Card>

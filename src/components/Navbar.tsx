@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
@@ -43,22 +43,6 @@ const Navbar = () => {
               <Link to="/" className="nav-link">
                 Home
               </Link>
-              <div className="relative group">
-                <button className="nav-link flex items-center">
-                  Services <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <Link to="/services/cloud" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Cloud Solutions
-                  </Link>
-                  <Link to="/services/ai" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    AI Development
-                  </Link>
-                  <Link to="/services/software" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Software Development
-                  </Link>
-                </div>
-              </div>
               <Link to="/ai-agents" className="nav-link">
                 AI Agents
               </Link>
@@ -100,36 +84,6 @@ const Navbar = () => {
             >
               Home
             </Link>
-            <div className="relative">
-              <button
-                className="w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100"
-              >
-                Services
-              </button>
-              <div className="pl-4 space-y-1">
-                <Link
-                  to="/services/cloud"
-                  className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Cloud Solutions
-                </Link>
-                <Link
-                  to="/services/ai"
-                  className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  AI Development
-                </Link>
-                <Link
-                  to="/services/software"
-                  className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Software Development
-                </Link>
-              </div>
-            </div>
             <Link
               to="/ai-agents"
               className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100"

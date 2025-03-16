@@ -1,8 +1,6 @@
 
 import { useState } from 'react';
 import { ArrowLeft, ArrowRight, Quote } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 
 const TestimonialsSection = ({ limit = 3 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -128,14 +126,6 @@ const TestimonialsSection = ({ limit = 3 }) => {
               <ArrowRight className="h-5 w-5 text-ant-purple" />
             </button>
           </div>
-
-          {limit && limit < testimonials.length && (
-            <div className="text-center mt-12">
-              <Button variant="outline" className="border-ant-purple text-ant-purple hover:bg-ant-purple/5">
-                <Link to="/testimonials">View All Testimonials</Link>
-              </Button>
-            </div>
-          )}
         </div>
       </div>
     </section>

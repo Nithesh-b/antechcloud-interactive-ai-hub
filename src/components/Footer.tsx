@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-ant-darkblue text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
           <div className="col-span-1 md:col-span-1 lg:col-span-1">
             <Link to="/" className="flex items-center mb-4">
               <span className="text-2xl font-bold">
@@ -30,32 +30,6 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
             </div>
-          </div>
-          
-          <div className="col-span-1">
-            <h3 className="text-lg font-bold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/services/cloud" className="text-gray-300 hover:text-ant-teal">
-                  Cloud Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/ai" className="text-gray-300 hover:text-ant-teal">
-                  AI Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/software" className="text-gray-300 hover:text-ant-teal">
-                  Software Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-agents" className="text-gray-300 hover:text-ant-teal">
-                  AI Agents
-                </Link>
-              </li>
-            </ul>
           </div>
           
           <div className="col-span-1">
@@ -90,8 +64,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-ant-teal" />
-                <a href="tel:+1234567890" className="text-gray-300 hover:text-ant-teal">
-                  +91 12345 67890
+                <a href="tel:+917795709574" className="text-gray-300 hover:text-ant-teal">
+                  +91 77957 09574
                 </a>
               </div>
               <div className="flex items-center">
