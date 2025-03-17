@@ -10,7 +10,7 @@ const TeamSection = ({ limit = 0 }) => {
       name: "Nithesh Balakrishnan",
       position: "Founder",
       bio: "Nithesh is the visionary founder of AN Technologies, bringing extensive experience in cloud architecture and AI solutions.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80",
+      image: "https://media.licdn.com/dms/image/v2/D5603AQErEHXG4I60pw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720720491108?e=1747872000&v=beta&t=EhWAuYRo8V965ZzIeko-8-7SlPigmYI9YYgDZZiXx7s&auto=format&fit=crop&w=256&h=256&q=80",
     },
     {
       id: 2,
@@ -24,21 +24,21 @@ const TeamSection = ({ limit = 0 }) => {
       name: "Santhosh Chavan",
       position: "Consultant Architect",
       bio: "Santhosh brings his expertise as a consultant architect, designing scalable and secure technology solutions.",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80",
+      image: "https://media.licdn.com/dms/image/v2/D4E03AQGfy4q-yzDD5g/profile-displayphoto-shrink_800_800/B4EZV3pFrVGYAc-/0/1741469015950?e=1747872000&v=beta&t=XiP3QK9vttJ7fCA7p-qcxd0_861_a8jXeEJODtWmIrg&auto=format&fit=crop&w=256&h=256&q=80",
     },
     {
       id: 4,
       name: "Ansiya V A",
       position: "Data Science Engineer",
       bio: "Ansiya leads the data science initiatives, developing machine learning models and AI algorithms for our clients.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80",
+      image: "https://media.licdn.com/dms/image/v2/D5603AQEHj2JdiY-LRA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721575739612?e=1747872000&v=beta&t=MsO8ODH9dwYkblEhovvLCxUqzXS6ZddApE9pQoEUTWc&auto=format&fit=crop&w=256&h=256&q=80",
     },
     {
       id: 5,
       name: "Abhishek B",
       position: "IT Infrastructure Expert",
       bio: "Abhishek specializes in IT infrastructure and serves as a senior developer for complex enterprise projects.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80",
+      image: "https://media.licdn.com/dms/image/v2/D5603AQEzGQDB82VYkw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690170952420?e=1747872000&v=beta&t=rYa1jbvYDjcZWte778qKAlGth30VYPb8ebEpWKDI-vA&auto=format&fit=crop&w=256&h=256&q=80",
     }
   ];
 
