@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -60,11 +59,17 @@ const TeamSection = ({ limit = 0 }) => {
           {displayTeam.map((member) => (
             <Card key={member.id} className="overflow-hidden card-hover border-0 shadow-md">
               <div className="aspect-w-3 aspect-h-2 bg-gradient-to-r from-ant-blue to-ant-purple">
-                <img 
-                  src={member.image} 
-                  alt={member.name}
-                  className="w-full h-64 object-cover object-center"
-                />
+                <div className="w-full h-64 overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-auto object-cover object-top"
+                    style={{
+                      maxHeight: '150%',
+                      marginTop: member.id === 1 ? '-20px' : '0'
+                    }}
+                  />
+                </div>
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
