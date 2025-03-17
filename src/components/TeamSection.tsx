@@ -17,7 +17,7 @@ const TeamSection = ({ limit = 0 }) => {
       name: "Prashanth Gunda",
       position: "Software Developer",
       bio: "Prashanth is a skilled software developer specializing in full-stack development and cloud-native applications.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80",
+      image: "https://media.licdn.com/dms/image/v2/D5603AQEXc4niKvgCFg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1732520329580?e=1747872000&v=beta&t=1KMcohFC6P20sW4abQXuuRYs8Si_c-fzJSYqjrvqg_k&auto=format&fit=crop&w=256&h=256&q=80",
     },
     {
       id: 3,
