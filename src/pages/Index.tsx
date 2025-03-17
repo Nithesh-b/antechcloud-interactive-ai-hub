@@ -7,6 +7,7 @@ import AIAgentsSection from '@/components/AIAgentsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import TeamSection from '@/components/TeamSection';
 import ContactSection from '@/components/ContactSection';
+import BlogsSection from '@/components/BlogsSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
         <HeroSection />
         <ServiceSection />
         <AIAgentsSection />
+        <BlogsSection limit={3} />
         <TestimonialsSection limit={3} />
         <TeamSection limit={3} />
         <ContactSection />

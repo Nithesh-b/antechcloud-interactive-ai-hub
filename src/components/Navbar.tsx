@@ -46,6 +46,9 @@ const Navbar = () => {
               <Link to="/ai-agents" className="nav-link">
                 AI Agents
               </Link>
+              <Link to="/blogs" className="nav-link">
+                Blogs
+              </Link>
               <Link to="/testimonials" className="nav-link">
                 Testimonials
               </Link>
@@ -90,6 +93,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               AI Agents
+            </Link>
+            <Link
+              to="/blogs"
+              className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blogs
             </Link>
             <Link
               to="/testimonials"
