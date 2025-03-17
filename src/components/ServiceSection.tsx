@@ -49,9 +49,9 @@ const ServiceSection = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">{service.title}</h3>
               <p className="text-gray-600 mb-6">{service.description}</p>
-              <Button variant="link" className="p-0 text-ant-purple hover:text-ant-purple/80">
+              {/* <Button variant="link" className="p-0 text-ant-purple hover:text-ant-purple/80">
                 <Link to={service.link}>Learn More &rarr;</Link>
-              </Button>
+              </Button> */}
             </div>
           ))}
         </div>
