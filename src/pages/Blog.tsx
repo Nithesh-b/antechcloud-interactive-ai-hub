@@ -1,17 +1,30 @@
-
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { blogPosts } from '@/data/blogData';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 
 const Blog = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const post = blogPosts.find((post) => post.slug === slug);
+
+  useEffect(() => {
+    if (!post && slug) {
+      console.error(`Blog post with slug "${slug}" not found`);
+      const timer = setTimeout(() => {
+        navigate('/blogs');
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+
+    if (post) {
+      document.title = `${post.title} | AN Technologies`;
+    }
+  }, [post, slug, navigate]);
 
   if (!post) {
     return (
@@ -20,6 +33,9 @@ const Blog = () => {
         <main className="flex-1 container mx-auto px-4 py-20">
           <div className="text-center py-20">
             <h1 className="text-3xl font-bold mb-4">Blog Post Not Found</h1>
+            <p className="text-muted-foreground mb-8">
+              The blog post you are looking for does not exist or may have been moved.
+            </p>
             <Link to="/blogs">
               <Button>
                 <ArrowLeft className="mr-2 h-4 w-4" />
